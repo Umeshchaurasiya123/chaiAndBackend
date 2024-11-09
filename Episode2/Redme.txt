@@ -1,0 +1,143 @@
+How  to deploy backend code in production. 
+
+
+so we haev 1 server and one computer mobile. so getting the reqrust and sending the response it done throught the express. 
+
+/:Home route
+/login 
+
+
+// so the listing is done throught Express. 
+
+// so when we send the request some one had to listen in the server. 
+// the listing  is done throught the express. 
+
+// it gives you server the capabilty to listend the requrst. 
+
+// so first i have to create an empty node emplication. where i can install the express and other packages. 
+
+// npm init this command is used to  create an empty node application. 
+// npm init node package mamager sai ek application to inicialize kar do. 
+// throught this process one file is create which is called package.json 
+// this file contain all the information about the  project. 
+// than we can used npm install package to install all the packages in prokect as save it as a dependancy in packages.json. 
+// so basically it is  mamaging the dependancy as well. 
+
+{
+  "name": "chaibackend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
+
+// here index.js is the  staring point of our program. 
+// so create an index.js file first. 
+
+
+// now to run this i can simply use node index.js and it will run 
+
+// but to run from package.js than we used the  script. 
+
+{
+  "name": "chaibackend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+
+  },
+  "author": "",
+  "license": "ISC"
+}
+
+
+now it will type npm run start. 
+it will go inside the package.json and and look for star and its corresponding value. 
+
+PS C:\Users\mohan\OneDrive\Desktop\chaiAndBackend\Episode2> node index.js
+chai and backqend
+PS C:\Users\mohan\OneDrive\Desktop\chaiAndBackend\Episode2> npm run start
+
+> chaibackend@1.0.0 start
+> node index.js
+
+chai and backqend
+
+// now we have create our empty application. 
+
+// now to create a server we used express. 
+// which give us routhing functinality and listing functinality to our code. 
+
+// npm install express
+
+{
+  "name": "chaibackend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
+
+
+const express=require('express')
+// common js  work Aysnchoniusly
+
+imprt express from "express"
+// module js  work synchoniusly 
+
+
+// computer have many ports. 
+like pendrive port it is phycial but it also have many virtual port as well. 
+
+so port is where our application listend on server(computer) where is it deployed 
+
+
+// after  installing express  now our application is not closed. 
+// it is running infinityly. 
+// application is listing infinitly. 
+
+// so congratulation server is ready. 
+
+// to stop the serbver we use control +c
+
+// now to deploy the code we have to hide some confidencial code. 
+// also  in serve there is not clearity that which port is full or which one is empty. 
+
+// so we need new packafg call .env
+ // use npm i dotenv
+
+now create a one new file name .env
+it contain all the  importanat value which one want to hide. 
+
+
+Now as of my git is steup as i install git and setup the ssh key. so now i can diretly push my code. 
+those confidencial thing which i do not want to send to git i can make sure to mention those details in .gitignore
+ 
+node_modules
+.env
+
+i do not want my node module as well as .env go to git
+
+node module is basically automatically generate when we install some packages. 
+it contain all the requred dependancy which is need to run that perticuler package. 
+it can automatically downlaod no issue is there. 
+
+so this thing can be recreat. 
+The node_modules folder is a directory in a Node.js project
+where all the project dependencies and their nested dependencies are stored.
+When you run npm install (or yarn install), Node Package Manager (NPM) or Yarn reads the package.json file,
+downloads the specified packages, and places them in the node_modules folder.
+
